@@ -4,6 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDksx_Db8p7e94395ruf-ZiZFmEyV1BJMc",
+  authDomain: "fir-efratdagan.firebaseapp.com",
+  projectId: "fir-efratdagan",
+  storageBucket: "fir-efratdagan.firebasestorage.app",
+  messagingSenderId: "992742027112",
+  appId: "1:992742027112:web:4b3c4db5243c4c42e830dd",
+  measurementId: "G-Y62VR3NSRN"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
